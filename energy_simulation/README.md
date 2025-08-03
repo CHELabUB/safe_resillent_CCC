@@ -1,5 +1,5 @@
-# energy simluation
-This folder contians the simulator of efficient CCC. 
+# energy simulation
+This folder contains the simulator of efficient CCC. 
 
 # Requirement
 MATLAB 2024b and above

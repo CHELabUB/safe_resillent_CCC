@@ -1,14 +1,14 @@
 clear; close all; clc 
-% this file is written to extract all the optimized beta combinations of all data fodlers
+% this file is written to extract all the optimized beta combinations of all data folders
 % Please note those data folders are not included in the repository, you need to run the simulation pipeline to generate them.
-% You need to run the brute force search code in energy_simluation folder twice 
+% You need to run the brute force search code in energy_simulation folder twice 
 % to get the folder CCC_car_filter_0_3_lead_vehicles_a_under_4 and CCC_car_filter_1_3_lead_vehicles_a_under_4.
 % Then run the spectrum analysis code in spectrum_analysis folder.
-% the results will be saved in the spectrum_analysis/pertubation_eqpt_results/spectrum_3_leading_vehicles folder.
+% the results will be saved in the spectrum_analysis/perturbation_eqpt_results/spectrum_3_leading_vehicles folder.
 % If you have any questions, please contact the author. Original data files are available upon reasonable request.
 
 
-spectrum_run = load(fullfile(fileparts(pwd),'spectrum_analysis','pertubation_eqpt_results','spectrum_3_leading_vehicles', 'run_info.mat'));
+spectrum_run = load(fullfile(fileparts(pwd),'spectrum_analysis','perturbation_eqpt_results','spectrum_3_leading_vehicles', 'run_info.mat'));
 spectrum_run_info = spectrum_run.run_info;
 spectrum_data_summary = spectrum_run.run_info.spectrum_opt_data_summary;
 nn = size(spectrum_run_info.beta_range,2);

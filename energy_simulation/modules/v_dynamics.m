@@ -21,7 +21,7 @@ classdef v_dynamics
             obj.a = a;  
             obj.vehicle_type = vehicle_type;
         end
-        %%%%%%%%%%%%%%%%%%%%%%% addubf more vehicle type for robustness %%%%%%%%%%%%%%%%%%%%%%%
+        %%%%%%%%%%%%%%%%%%%%%%% add more vehicle type for robustness %%%%%%%%%%%%%%%%%%%%%%%
         function f_resist = resistance(obj, v)
             if obj.vehicle_type == "car"
                 f_resist = 0.0147 + 2.75e-04 * v^2;

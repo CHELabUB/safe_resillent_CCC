@@ -1,5 +1,5 @@
 # spectrum analysis
-This folder contians the details of spectrum analysis. 
+This folder contains the details of spectrum analysis. 
 
 # Requirement
 MATLAB 2024b and above
@@ -10,7 +10,7 @@ Once you clone the repo, you can try to re-generate the results shown on the man
 To generate the detailed results of the spectrum analysis: please first go to spectrum analysis folder, then use [`spectrum_analysis.m`](spectrum_analysis.m), the structure of the generated data will be shown as : 
 
 ```text
-pertubation_eqpt_results/
+perturbation_eqpt_results/
   └── run_path (e.g., spectrum_3_leading_vehicles)
         ├── run_info.mat                # Summary for all 6 profiles (big tables)
         ├── run_folder (e.g., profile1)

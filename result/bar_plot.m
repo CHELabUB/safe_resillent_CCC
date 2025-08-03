@@ -71,7 +71,7 @@ for i = 1:N
 end
 for i = 1:N
     [min_J, min_idx] = min(filter_1_data_summary{i}(:,4));
-    brute_ACC_idx = zeros(N,1);
+    brute_CCC_idx(i) = min_idx;
     brute_CCC_beta(i,:) = filter_1_data_summary{i}(min_idx,1:3);
     brute_CCC_energy(i) = filter_1_data_summary{i}(min_idx,4);
 end

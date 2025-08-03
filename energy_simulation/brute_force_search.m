@@ -7,7 +7,7 @@ if ~exist(result_root, 'dir')
     mkdir(result_root);
 end
 
-% please note that the source data files will be avaliable upon reasonable request, 
+% please note that the source data files will be available upon reasonable request, 
 % please contact the author for more information.
 % Here you can use your on data folder to replace the source data directory to use our simulation pipeline. 
 
@@ -57,7 +57,6 @@ for i = 1:N
     data = Data(i);
     % CCC_opt_data = cell(n, n, n);
     result_collection = zeros(nn, 6); % [beta1, beta2, beta3, energy_total, unsafe, collision]
-    result_detail = cell(nn, 1); % to store each run's detail information
     run_folder = fullfile(result_dir, profile_names{i}); % create a folder for each data set
     tic
     if ~exist(run_folder, 'dir')
@@ -83,8 +82,6 @@ for i = 1:N
     data_summary = fullfile(run_folder, "data_summary.mat");
     save(data_summary, 'result_collection') 
     CCC_opt_data_summary{i} = result_collection; 
-    data_detail = fullfile(run_folder, num2str(nn) + "_run_detail" + ".mat");
-    save(data_detail, 'result_detail') 
 end
 
 run_info.CCC_opt_data_summary = CCC_opt_data_summary; 

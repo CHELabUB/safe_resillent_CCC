@@ -20,7 +20,7 @@ for i = 1:N
     Data(i) = load(fullfile(source_data, "8_vehicles_" + profile_names{i} + ".mat")); % load each data file
 end
 
-result_root = "pertubation_eqpt_results";
+result_root = "perturbation_eqpt_results";
 if ~exist(result_root, 'dir')
     mkdir(result_root);
 end
@@ -43,7 +43,6 @@ nn = size(beta_combinations, 1); % n^3
 for i = 1:N
     data = Data(i);
     result_conclusion = zeros(nn, 4);
-    result_detail = cell(nn, 1);
     run_folder = fullfile(result_dir, profile_names{i});
     tic
     disp('running')
@@ -66,8 +65,6 @@ for i = 1:N
     data_summary = fullfile(run_folder, "data_summary.mat");
     save(data_summary, 'result_conclusion');
     spectrum_opt_data_summary{i} = result_conclusion;
-    data_detial = fullfile(run_folder, num2str(nn) + "_run_detail" + ".mat");
-    save(data_detial, 'result_detail');
 end
 
 run_info.spectrum_opt_data_summary = spectrum_opt_data_summary;
